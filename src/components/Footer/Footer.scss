@@ -1,0 +1,28 @@
+@use '../../styles/partials/variables' as *;
+
+.footer {
+    padding: 1rem;
+    background-color: $footer-background;
+    color: $text-on-dark;
+    text-align: center;
+
+    &__info {
+        padding: 0.5rem 0.5rem;
+    }
+}
+
+.socials {
+
+
+&__img {
+    width: 2rem;
+    height: 2rem;
+    padding-left: 0.5rem;
+}
+
+    &__facebook {
+        width: 2rem;
+        height: 2rem;
+        
+    }
+}
