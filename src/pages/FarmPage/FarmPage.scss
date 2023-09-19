@@ -1,10 +1,30 @@
-.farm-card {
-    &__image {
-        width: 100%;
-    }
+@use "../../styles/partials/mixins" as *;
 
-    &__name {
-        text-align: center;
-        font-weight: 600;
+.farm-wrapper {
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.farm-card {
+  &__image {
+    width: 100%;
+
+    @include desktop {
+      max-width: 10rem;
+      min-height: 10rem;
+      padding-right: 1rem;
     }
+  }
+
+  &__name {
+    text-align: center;
+    font-weight: 600;
+
+    @include desktop {
+      font-size: 0.7rem;
+    }
+  }
 }

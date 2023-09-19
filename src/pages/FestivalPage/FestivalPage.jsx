@@ -31,18 +31,20 @@ const FestivalPage = () => {
 
   return (
     <div className="page">
-      {festivalList.map((festival) => (
-        <Link
-          className="link"
-          key={festival.id}
-          to={`/festivals/${festival.id}`}
-        >
-          <div className="festival-card">
-            <p className="festival-card__name">{festival.organization}</p>
-            <img className="festival-card__image" src={festival.image} />
-          </div>
-        </Link>
-      ))}
+      <div className="festival-wrapper">
+        {festivalList.map((festival) => (
+          <Link
+            className="link"
+            key={festival.id}
+            to={`/festivals/${festival.id}`}
+          >
+            <div className="festival-card">
+              <p className="festival-card__name">{festival.organization}</p>
+              <img className="festival-card__image" src={festival.image} />
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,4 +1,3 @@
-
 import "./FarmPage.scss";
 
 import { useParams, Link } from "react-router-dom";
@@ -32,14 +31,16 @@ const FarmPage = () => {
 
   return (
     <div className="page">
-      {farmList.map((farm) => (
-        <Link className="link" key={farm.id} to={`/farms/${farm.id}`}>
-          <div className="farm-card">
-            <p className="farm-card__name">{farm.farm_name}</p>
-            <img className="farm-card__image" src={farm.image} />
-          </div>
-        </Link>
-      ))}
+      <div className="farm-wrapper">
+        {farmList.map((farm) => (
+          <Link className="link" key={farm.id} to={`/farms/${farm.id}`}>
+            <div className="farm-card">
+              <p className="farm-card__name">{farm.farm_name}</p>
+              <img className="farm-card__image" src={farm.image} />
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

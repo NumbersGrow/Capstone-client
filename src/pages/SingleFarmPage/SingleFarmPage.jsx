@@ -41,35 +41,37 @@ const SingleFarmPage = () => {
           <div className="farm-container__context">
             <h1 className="farm-container__name">{farm.farm_name}</h1>
             <img className="farm-container__image" src={farm.image} />
-            <p>
+          </div>
+          <div className="farm-container__desktop">
+            <p className="farm-container__info-desktop">
               Address:
               <span className="farm-container__info">{farm.address}</span>
             </p>
-            <p>
+            <p className="farm-container__info-desktop">
               City:<span className="farm-container__info"> {farm.city}</span>
             </p>
-            <p>
+            <p className="farm-container__info-desktop">
               Owner:<span className="farm-container__info">{farm.owner}</span>
             </p>
-            <p>
+            <p className="farm-container__info-desktop">
               Phone:
               <span className="farm-container__info">{farm.contact_phone}</span>
             </p>
-            <p>
+            <p className="farm-container__info-desktop">
               Website:
               <span className="farm-container__info">{farm.website}</span>
             </p>
-            <p>
+            <p className="farm-container__info-desktop">
               Current Promo:
               <span className="farm-container__info"> {farm.promotion}</span>
             </p>
+            <p className="farm-container__product-list">Products:</p>
+            {farmProduct.map((product) => (
+              <ul className="farm-container__product-list" key={product.id}>
+                <li className="farm-container__product">{product.product}</li>
+              </ul>
+            ))}
           </div>
-          <p className="farm-container__product-list">Products:</p>
-          {farmProduct.map((product) => (
-            <ul key={product.id}>
-              <li className="farm-container__product">{product.product}</li>
-            </ul>
-          ))}
         </div>
       ))}
     </div>

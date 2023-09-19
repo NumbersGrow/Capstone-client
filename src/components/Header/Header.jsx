@@ -12,7 +12,6 @@ const Header = () => {
           <Link to="/" className="header__link">
             <img className="header__img" src={logo} alt="our logo" />
           </Link>
-        </div>
         <nav className="header__nav">
           <ul className="header__list">
             <li className="header__item">
@@ -32,6 +31,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
+        </div>
         <section className="hero">
           <p className="slogan">Ready to eat Healthy?</p>
           <input className="search" placeholder="Search" />

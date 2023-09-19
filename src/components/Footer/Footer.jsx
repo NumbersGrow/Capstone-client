@@ -6,12 +6,10 @@ import "./Footer.scss";
 
 const Footer = () => {
     return (
-      <div>
+      <div className="footer">
         <h3>Our Contacts:</h3>
-        <p>Email:</p>
-        <a className="footer__email" href="mailto:info@farmapp.com">info@farmapp.com</a>
-        <p>Phone:</p>
-        <p>+1 (123) 456-78-90</p>
+        <p className="footer__info">Email: <a className="footer__email" href="mailto:info@farmapp.com">info@farmapp.com</a></p>
+        <p className="footer__info">Phone: +1 (123) 456-78-90</p>
         <div className="socials">
         <img src={facebook} className="socials__facebook socials__img" alt="facebook"/>
         <img src={instagram} className="socials__instagram socials__img" alt="instagram"/>
